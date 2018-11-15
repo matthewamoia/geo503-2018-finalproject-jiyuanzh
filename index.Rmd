@@ -24,8 +24,8 @@ library(sf)
 library(rgdal)
 data(world)
 US.sf <- world %>% dplyr::filter(iso_a2 == "US")
-OTP <- read.csv("D:/UB/2018 Fall/503 R/geo503-2018-finalproject-jiyuanzh/data/OnTimeP.csv")
-APdata <- read.csv("D:/UB/2018 Fall/503 R/geo503-2018-finalproject-jiyuanzh/data/AirportData.csv")
+OTP <- read.csv("data/OnTimeP.csv")
+APdata <- read.csv("data/AirportData.csv")
 OTP.clean <- OTP %>% dplyr::filter(DEP_DELAY_NEW >= 1) %>% dplyr::filter(WEATHER_DELAY >= 1) %>% 
   dplyr::select(YEAR, MONTH, DAY_OF_MONTH, ORIGIN, ORIGIN_STATE_ABR, DEP_DELAY_NEW, WEATHER_DELAY)
 OTP.sum <- OTP.clean %>% dplyr::select(ORIGIN, DEP_DELAY_NEW, WEATHER_DELAY) %>%

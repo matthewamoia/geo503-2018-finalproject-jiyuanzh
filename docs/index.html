@@ -335,8 +335,8 @@ library(sf)
 library(rgdal)
 data(world)
 US.sf &lt;- world %&gt;% dplyr::filter(iso_a2 == &quot;US&quot;)
-OTP &lt;- read.csv(&quot;D:/UB/2018 Fall/503 R/geo503-2018-finalproject-jiyuanzh/data/OnTimeP.csv&quot;)
-APdata &lt;- read.csv(&quot;D:/UB/2018 Fall/503 R/geo503-2018-finalproject-jiyuanzh/data/AirportData.csv&quot;)
+OTP &lt;- read.csv(&quot;data/OnTimeP.csv&quot;)
+APdata &lt;- read.csv(&quot;data/AirportData.csv&quot;)
 OTP.clean &lt;- OTP %&gt;% dplyr::filter(DEP_DELAY_NEW &gt;= 1) %&gt;% dplyr::filter(WEATHER_DELAY &gt;= 1) %&gt;% 
   dplyr::select(YEAR, MONTH, DAY_OF_MONTH, ORIGIN, ORIGIN_STATE_ABR, DEP_DELAY_NEW, WEATHER_DELAY)
 OTP.sum &lt;- OTP.clean %&gt;% dplyr::select(ORIGIN, DEP_DELAY_NEW, WEATHER_DELAY) %&gt;%
