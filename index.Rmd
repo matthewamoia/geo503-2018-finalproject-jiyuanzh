@@ -4,14 +4,14 @@ author: "Peter Jiyuan Zhou"
 subtitle: A study to address airport delay and snow
 ---
 
-# Introduction
+# Introduction 
 Air travel is increasingly popular in not only the United States but also other parts of the world. However, flight delay are getting more and more normal especially for large airports. In the northern part of the US, snow is often one of the factor resulting in flight delay in winter and it is especially annoying. This project aims to analyse the vulnerability of airport delays to snowfall across different region in the US.  
 
-# Data
+# Data 
 * [On Time Performance Data](https://www.transtats.bts.gov/Tables.asp?DB_ID=120&DB_Name=Airline%20On-Time%20Performance%20Data&DB_Short_Name=On-Time): "Airline On Time Performance Data" from Bureau of Transportation Statistics, Unitd States Department of Transportation.
 * [Airport Location Data](https://www.transtats.bts.gov/Tables.asp?DB_ID=595&DB_Name=Aviation%20Support%20Tables): "Master Coordinates" of "Aviation Support Table" from Bureau of Transportation Statistics, United States Department of Transportation
 
-# Materials and methods
+# Materials and methods 
 
 * Importing the data and data cleaning
 ```{r message = FALSE}
@@ -38,7 +38,7 @@ A$AIRPORT <- sapply(A$AIRPORT, as.character)
 Airport.sf <- st_as_sf(A, coords = c("lon", "lat"), crs = 4326)
 ```
 
-# Results
+# Results 
 
 * Visualization of Locaton of all US Airport considered
 ```{r}
@@ -61,7 +61,7 @@ p3
 ```
 
 
-# Conclusions
+# Conclusions 
 
 What have you learned?  Are there any broader implications?
 
